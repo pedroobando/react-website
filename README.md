@@ -1,8 +1,13 @@
-## Plantilla de para crear apps de reactjs, tiene configurado slint y prettier
+## React Bootstrap City Guide App 
 
-Este proyecto fue arrancado con [Create React App](https://github.com/facebook/create-react-app).
+Excelente [Create React App](https://www.youtube.com/playlist?list=PL6jnTQwFvrdaIWZgF4r4my4kFqGjatO6X).
 
-## Available Scripts
+## Implementacion
+
+bootstrap
+react-fontawesome
+react-router-dom
+styled-component
 
 In the project directory, you can run:
 
