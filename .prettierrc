@@ -1,0 +1,7 @@
+{
+  "printWidth": 90,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "tabs": true,
+  "tabWidth": 2
+}
