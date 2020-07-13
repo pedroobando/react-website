@@ -43,7 +43,7 @@ const Details = () => {
 
         return (
           <React.Fragment>
-            <HeaderDetails className="container-fluid align-items-center">
+            <HeaderDetails className="container-fluid align-items-center" key={id}>
               <h1 className="display-1 font-weight-bold">{headerTitle}</h1>
               <h4 className="display-5">{headerSubTitle}</h4>
               <p>{headerText}</p>
@@ -141,6 +141,7 @@ const Details = () => {
                   role="tabpanel"
                 >
                   <iframe
+                    title="the maps"
                     src={maps}
                     style={{
                       border: "0",

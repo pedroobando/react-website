@@ -1,10 +1,16 @@
 import React from "react";
+import { InfoConsumer } from "../context";
+import NewsCard from "../NewsCard";
 
 const News = () => {
   return (
-    <React.Fragment>
-      <h2>News Pages</h2>
-    </React.Fragment>
+    <InfoConsumer>
+      {(value) => {
+        return value.news.map((item) => {
+          return <NewsCard key={item.id} item={item} />;
+        });
+      }}
+    </InfoConsumer>
   );
 };
 

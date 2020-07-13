@@ -6,7 +6,7 @@ const ReviewCard = (props) => {
   return (
     <InfoConsumer>
       {(data) => (
-        <div className="media mt-5">
+        <div className="media mt-5" key={id}>
           <img src={avatar} alt={name} className="mr-3" style={{ width: "40px" }} />
           <div className="media-body">
             <h5 className="mt-0">{name}</h5>
