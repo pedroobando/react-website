@@ -18,7 +18,7 @@ const App = () => (
       <Route path="/news" component={News} />
       <Route path="/contacts" component={Contacts} />
       <Route path="/details" component={Details} />
-      <Route path="/" component={Home} />
+      <Route exact path="/" component={Home} />
       <Route component={NotFoundPage} />
     </Switch>
     <Footer />
