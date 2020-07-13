@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { InfoConsumer } from "../context";
+import styled from "styled-components";
+import Reviews from "../Reviews";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -41,7 +43,7 @@ const Details = () => {
 
         return (
           <React.Fragment>
-            <div className="container-fluid align-items-center">
+            <HeaderDetails className="container-fluid align-items-center">
               <h1 className="display-1 font-weight-bold">{headerTitle}</h1>
               <h4 className="display-5">{headerSubTitle}</h4>
               <p>{headerText}</p>
@@ -66,14 +68,14 @@ const Details = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </HeaderDetails>
             {/* Nav Link */}
             <div className="container">
               <ul className="nav nav-tabs">
                 {/* About Place */}
                 <li className="nav-item">
                   <a
-                    href="#"
+                    href="#aboutPlace"
                     className={`${tabSelect === 1 ? "active" : ""} nav-link`}
                     role="tab"
                     data-toggle="tab"
@@ -86,7 +88,7 @@ const Details = () => {
                 {/* Reviews */}
                 <li className="nav-item">
                   <a
-                    href="#"
+                    href="#reviews"
                     className={`${tabSelect === 2 ? "active" : ""} nav-link`}
                     role="tab"
                     data-toggle="tab"
@@ -99,7 +101,7 @@ const Details = () => {
                 {/* Maps */}
                 <li className="nav-item">
                   <a
-                    href="#"
+                    href="#maps"
                     className={`${tabSelect === 3 ? "active" : ""} nav-link`}
                     role="tab"
                     data-toggle="tab"
@@ -130,13 +132,7 @@ const Details = () => {
                   className={`${tabSelect !== 2 ? "sr-only" : "active"} tab-pane mt-5`}
                   role="tabpanel"
                 >
-                  <h2>Reviews content</h2>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum,
-                    veniam ullam aliquid non, maxime ducimus tempora neque voluptates
-                    necessitatibus eligendi sed unde est porro iure voluptatibus pariatur
-                    corrupti rerum fuga.
-                  </p>
+                  <Reviews />
                 </div>
                 {/* Maps */}
                 <div
@@ -164,3 +160,47 @@ const Details = () => {
 };
 
 export default Details;
+
+const HeaderDetails = styled.header`
+  background: linear-gradient(rgba(109, 109, 109), rgba(225, 255, 255));
+  height: 100vh;
+  text-transform: uppercase;
+  color: var(--mainWhite);
+  text-align: center;
+
+  h1 {
+    padding-top: 10%;
+    color: var(--mainDark);
+  }
+
+  h4 {
+    color: var(--mainDark);
+  }
+
+  p {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    color: var(--mainDark);
+  }
+
+  svg {
+    font-size: 1.877rem;
+    color: var(--mainDark);
+  }
+
+  svg:hover {
+    color: var(--mainBlue);
+  }
+
+  .nav-item {
+    height: 18.75rem;
+  }
+
+  @mdedia (max-width: 760px) {
+    h1,
+    h4 {
+      color: var(--mainWhite);
+    }
+  }
+`;
