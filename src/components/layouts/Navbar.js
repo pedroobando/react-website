@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faToriiGate,
   faHome,
   faNewspaper,
   faBars,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const iconNews = <FontAwesomeIcon icon={faNewspaper} />;
 const iconHome = <FontAwesomeIcon icon={faHome} />;
@@ -18,6 +18,10 @@ const Navbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
@@ -32,15 +36,13 @@ const Navbar = () => {
         aria-controls="navbarSupportedContent"
         aria-expanded={!isNavCollapsed ? true : false}
         aria-label="Toggle navigation"
-        onClick={handleNavCollapse}
-      >
-        <span style={{ color: "white" }}>{iconBars}</span>
+        onClick={handleNavCollapse}>
+        <span style={{ color: 'white' }}>{iconBars}</span>
       </button>
 
       <div
-        className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
-        id="navbarSupportedContent"
-      >
+        className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}
+        id="navbarSupportedContent">
         <ul className="navbar-nav m-auto">
           <li className="nav-item active">
             <Link className="nav-link text-white text-uppercase ml-sm-0 ml-md-5" to="/">
@@ -51,21 +53,19 @@ const Navbar = () => {
           <li className="nav-item">
             <Link
               className="nav-link text-white text-uppercase ml-sm-0 ml-md-5"
-              to="/news"
-            >
+              to="/news">
               News {iconNews}
             </Link>
           </li>
           <li className="nav-item">
             <Link
               className="nav-link text-white text-uppercase ml-sm-0 ml-md-5"
-              to="/contacts"
-            >
+              to="/contacts">
               Contact Us
             </Link>
           </li>
         </ul>
-        <form className="form-inline my-2 my-lg-0">
+        <form className="form-inline my-2 my-lg-0" onSubmit={handleSubmit}>
           <input
             className="form-control mr-sm-2"
             type="search"

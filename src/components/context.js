@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { placeInfo, reviews, detailInfo, news } from "../data";
+import React, { useState } from 'react';
+import { placeInfo, reviews, detailInfo, news } from '../data';
 
 const InfoContext = React.createContext();
 
@@ -31,8 +31,7 @@ const InfoProvider = (props) => {
         detailInfo: datoState.detailInfo,
         news: datoState.news,
         handleDetail: handleDetail,
-      }}
-    >
+      }}>
       {props.children}
     </InfoContext.Provider>
   );

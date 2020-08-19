@@ -1,6 +1,6 @@
-import React from "react";
-import { InfoConsumer } from "./context";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { InfoConsumer } from './context';
+import { Link } from 'react-router-dom';
 
 const Info = (props) => {
   const { id, headerTitle, headerSubTitle, headerText, img } = props.item;
@@ -9,7 +9,7 @@ const Info = (props) => {
     <InfoConsumer>
       {(value) => (
         <div className="col-10 col-lg-4 mx-auto mb-5">
-          <div className="card" style={{ width: "18rem" }}>
+          <div className="card" style={{ width: '18rem' }}>
             <img src={img} alt={`${headerTitle} - ${id}`} className="card-img-top" />
             <div className="card-body">
               <h3 className="card-title text-uppercase">{headerTitle}</h3>
@@ -18,8 +18,7 @@ const Info = (props) => {
               <Link
                 to="/details"
                 className="btn btn-outline-primary text-uppercase"
-                onClick={() => value.handleDetail(id)}
-              >
+                onClick={() => value.handleDetail(id)}>
                 More Info
               </Link>
             </div>

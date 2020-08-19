@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -22,16 +23,16 @@ const Footer = () => {
               <h4>Lorem, ipsum.</h4>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#">Lorem ipsum</a>
+                  <Link>Lorem ipsum</Link>
                 </li>
                 <li>
-                  <a href="#">Lorem ipsum</a>
+                  <Link to="/">Lorem ipsum</Link>
                 </li>
                 <li>
-                  <a href="#">Lorem ipsum</a>
+                  <Link to="/">Lorem ipsum</Link>
                 </li>
                 <li>
-                  <a href="#">Lorem ipsum</a>
+                  <Link to="/">Lorem ipsum</Link>
                 </li>
               </ul>
             </div>
@@ -40,16 +41,16 @@ const Footer = () => {
               <h4>Lorem, ipsum.</h4>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#">Lorem ipsum</a>
+                  <Link to="/">Lorem ipsum</Link>
                 </li>
                 <li>
-                  <a href="#">Lorem ipsum</a>
+                  <Link to="/">Lorem ipsum</Link>
                 </li>
                 <li>
-                  <a href="#">Lorem ipsum</a>
+                  <Link to="/">Lorem ipsum</Link>
                 </li>
                 <li>
-                  <a href="#">Lorem ipsum</a>
+                  <Link to="/">Lorem ipsum</Link>
                 </li>
               </ul>
             </div>
@@ -58,16 +59,16 @@ const Footer = () => {
               <h4>Lorem, ipsum.</h4>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#">Lorem ipsum</a>
+                  <Link to="/">Lorem ipsum</Link>
                 </li>
                 <li>
-                  <a href="#">Lorem ipsum</a>
+                  <Link to="/">Lorem ipsum</Link>
                 </li>
                 <li>
-                  <a href="#">Lorem ipsum</a>
+                  <Link to="/">Lorem ipsum</Link>
                 </li>
                 <li>
-                  <a href="#">Lorem ipsum</a>
+                  <Link to="/">Lorem ipsum</Link>
                 </li>
               </ul>
             </div>

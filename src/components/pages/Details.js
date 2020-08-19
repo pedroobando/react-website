@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { InfoConsumer } from "../context";
-import styled from "styled-components";
-import Reviews from "../Reviews";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from 'react';
+import { InfoConsumer } from '../context';
+import styled from 'styled-components';
+import Reviews from '../Reviews';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebookF,
   faTwitter,
@@ -10,7 +10,7 @@ import {
   faReddit,
   faFacebookMessenger,
   faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 
 const iconFacebook = <FontAwesomeIcon icon={faFacebookF} />;
 
@@ -76,12 +76,11 @@ const Details = () => {
                 <li className="nav-item">
                   <a
                     href="#aboutPlace"
-                    className={`${tabSelect === 1 ? "active" : ""} nav-link`}
+                    className={`${tabSelect === 1 ? 'active' : ''} nav-link`}
                     role="tab"
                     data-toggle="tab"
                     tabIndex="1"
-                    onClick={handleTabSelected}
-                  >
+                    onClick={handleTabSelected}>
                     About Place
                   </a>
                 </li>
@@ -89,12 +88,11 @@ const Details = () => {
                 <li className="nav-item">
                   <a
                     href="#reviews"
-                    className={`${tabSelect === 2 ? "active" : ""} nav-link`}
+                    className={`${tabSelect === 2 ? 'active' : ''} nav-link`}
                     role="tab"
                     data-toggle="tab"
                     tabIndex="2"
-                    onClick={handleTabSelected}
-                  >
+                    onClick={handleTabSelected}>
                     Reviews
                   </a>
                 </li>
@@ -102,12 +100,11 @@ const Details = () => {
                 <li className="nav-item">
                   <a
                     href="#maps"
-                    className={`${tabSelect === 3 ? "active" : ""} nav-link`}
+                    className={`${tabSelect === 3 ? 'active' : ''} nav-link`}
                     role="tab"
                     data-toggle="tab"
                     tabIndex="3"
-                    onClick={handleTabSelected}
-                  >
+                    onClick={handleTabSelected}>
                     Maps
                   </a>
                 </li>
@@ -118,10 +115,9 @@ const Details = () => {
                 <div
                   id="aboutPlace"
                   className={`${
-                    tabSelect !== 1 ? "sr-only" : "active"
+                    tabSelect !== 1 ? 'sr-only' : 'active'
                   } tab-pane in text-center mt-5`}
-                  role="tabpanel"
-                >
+                  role="tabpanel">
                   <h2 className="mb-3">{title}</h2>
                   <p>{description}</p>
                   <img src={img} alt={title} className="img-thumbnail img-fluid" />
@@ -129,27 +125,24 @@ const Details = () => {
                 {/* Reviews */}
                 <div
                   id="reviews"
-                  className={`${tabSelect !== 2 ? "sr-only" : "active"} tab-pane mt-5`}
-                  role="tabpanel"
-                >
+                  className={`${tabSelect !== 2 ? 'sr-only' : 'active'} tab-pane mt-5`}
+                  role="tabpanel">
                   <Reviews />
                 </div>
                 {/* Maps */}
                 <div
                   id="maps"
-                  className={`${tabSelect !== 3 ? "sr-only" : "active"} tab-pane mt-5`}
-                  role="tabpanel"
-                >
+                  className={`${tabSelect !== 3 ? 'sr-only' : 'active'} tab-pane mt-5`}
+                  role="tabpanel">
                   <iframe
                     title="the maps"
                     src={maps}
                     style={{
-                      border: "0",
-                      height: "28.125rem",
-                      width: "100%",
-                      frameborder: "0",
-                    }}
-                  ></iframe>
+                      border: '0',
+                      height: '28.125rem',
+                      width: '100%',
+                      frameborder: '0',
+                    }}></iframe>
                 </div>
               </div>
             </div>
